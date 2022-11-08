@@ -1,4 +1,4 @@
-package com.identaler.moviepicker;
+package Controller;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
