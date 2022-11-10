@@ -1,5 +1,3 @@
-package Service;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.w3c.dom.Document;
@@ -15,12 +13,13 @@ import java.io.File;
 import java.io.IOException;
 
 public class xmlRead {
+
     private static final String FILE = "C:\\Users\\koppa\\Desktop\\MoviePicker\\" +
             "src\\main\\java\\Resources\\movies.xml";
 
     DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 
-    public JSONArray Read(){
+    /*public JSONArray Read(){
 
         JSONArray movies = new JSONArray();
 
@@ -59,7 +58,7 @@ public class xmlRead {
             throw new RuntimeException(e);
         }
         return movies;
-    }
+    }*/
     public void items() throws ParserConfigurationException {
 
         try{
@@ -77,9 +76,5 @@ public class xmlRead {
         } catch (SAXException e) {
             throw new RuntimeException(e);
         }
-
-
     }
-
-
 }
