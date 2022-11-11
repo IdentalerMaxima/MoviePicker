@@ -7,10 +7,6 @@ public class Movie {
     private String director;
     private Genre genre;
 
-    public Movie(String title, Integer rating) {
-        this.title = title;
-        this.rating = rating;
-    }
 
     public Movie(String title, Integer rating, Integer year, String director, Genre genre) {
         this.title = title;

@@ -15,12 +15,12 @@ import java.util.Random;
 
 public class xmlRead {
 
-    private static final String FILE = "C:\\Users\\koppa\\Desktop\\MoviePicker\\" +
+    /*private static final String FILE = "C:\\Users\\koppa\\Desktop\\MoviePicker\\" +
             "src\\main\\java\\Resources\\movies.xml";
 
     DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 
-    /*public JSONArray Read(){
+    public JSONArray Read(){
 
         JSONArray movies = new JSONArray();
 
@@ -60,7 +60,7 @@ public class xmlRead {
         }
         return movies;
     }*/
-    public int randomNumber() throws ParserConfigurationException {
+    /*public int randomNumber() throws ParserConfigurationException {
 
         int randomMovieIndex;
 
@@ -78,5 +78,5 @@ public class xmlRead {
             throw new RuntimeException(e);
         }
         return randomMovieIndex;
-    }
+    }*/
 }
