@@ -11,6 +11,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
+import java.util.Random;
 
 public class xmlRead {
 
@@ -59,22 +60,23 @@ public class xmlRead {
         }
         return movies;
     }*/
-    public void items() throws ParserConfigurationException {
+    public int randomNumber() throws ParserConfigurationException {
 
-        try{
+        int randomMovieIndex;
+
+        try {
             DocumentBuilder builder = dbf.newDocumentBuilder();
             File f = new File(FILE);
             Document xml = builder.parse(f);
             xml.normalize();
 
             NodeList nodeList = xml.getElementsByTagName("movie");
-            System.out.println(nodeList.getLength());
+            Random random = new Random();
+            randomMovieIndex = random.nextInt(nodeList.getLength());
 
-
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (SAXException e) {
+        } catch (IOException | SAXException e) {
             throw new RuntimeException(e);
         }
+        return randomMovieIndex;
     }
 }

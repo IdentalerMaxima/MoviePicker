@@ -13,6 +13,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
+import java.util.Random;
 
 public class xmlRead {
     private static final String FILE = "C:\\Users\\koppa\\Desktop\\MoviePicker\\" +
@@ -51,35 +52,43 @@ public class xmlRead {
                 movies.put(movieObj);
             }
 
-        } catch (ParserConfigurationException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (SAXException e) {
+        } catch (ParserConfigurationException | IOException | SAXException e) {
             throw new RuntimeException(e);
         }
         return movies;
     }
-    public void items() throws ParserConfigurationException {
 
-        try{
+    public JSONObject getRandomMovie() throws ParserConfigurationException {
+
+        JSONObject movieObj = new JSONObject();
+
+        try {
             DocumentBuilder builder = dbf.newDocumentBuilder();
             File f = new File(FILE);
             Document xml = builder.parse(f);
             xml.normalize();
 
             NodeList nodeList = xml.getElementsByTagName("movie");
-            System.out.println(nodeList.getLength());
+            Random random = new Random();
 
+            Node node = nodeList.item(random.nextInt(nodeList.getLength()));
+            Element movie = (Element) node;
 
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (SAXException e) {
+            String title = movie.getElementsByTagName("title").item(0).getTextContent();
+            Integer rating = Integer.valueOf(movie.getElementsByTagName("rating").item(0).getTextContent());
+            Integer year = Integer.valueOf(movie.getElementsByTagName("year").item(0).getTextContent());
+            String director = movie.getElementsByTagName("director").item(0).getTextContent();
+            String genre = movie.getElementsByTagName("genre").item(0).getTextContent();
+
+            movieObj.put("title", title);
+            movieObj.put("rating", rating);
+            movieObj.put("year", year);
+            movieObj.put("director", director);
+            movieObj.put("genre", genre);
+
+        } catch (IOException | SAXException e) {
             throw new RuntimeException(e);
         }
-
-
+        return movieObj;
     }
-
-
 }

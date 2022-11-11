@@ -7,6 +7,8 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
+import javax.xml.parsers.ParserConfigurationException;
+
 @Path("/resources")
 public class HelloResource {
     @GET
@@ -16,9 +18,10 @@ public class HelloResource {
         return Response.ok(new xmlRead().Read().toString()).build();
     }
 
-    /*@GET
+    @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("getRandom")
-    public Response getRandom() {
-    }*/
+    public Response getRandom() throws ParserConfigurationException {
+        return Response.ok(new xmlRead().getRandomMovie().toString()).build();
+    }
 }
