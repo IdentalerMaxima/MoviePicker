@@ -1,3 +1,4 @@
+package DB;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.w3c.dom.Document;
@@ -5,7 +6,6 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -15,11 +15,12 @@ import java.util.Random;
 
 public class xmlRead {
 
-    /*private static final String FILE = "C:\\Users\\koppa\\Desktop\\MoviePicker\\" +
+    private static final String FILE = "C:\\Users\\koppa\\Desktop\\MoviePicker\\" +
             "src\\main\\java\\Resources\\movies.xml";
 
     DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 
+    //Returns JSONArray form XML
     public JSONArray Read(){
 
         JSONArray movies = new JSONArray();
@@ -59,8 +60,10 @@ public class xmlRead {
             throw new RuntimeException(e);
         }
         return movies;
-    }*/
-    /*public int randomNumber() throws ParserConfigurationException {
+    }
+
+    //returns a random item from JSONArray
+    public int randomNumber() throws ParserConfigurationException {
 
         int randomMovieIndex;
 
@@ -78,5 +81,6 @@ public class xmlRead {
             throw new RuntimeException(e);
         }
         return randomMovieIndex;
-    }*/
+    }
+
 }

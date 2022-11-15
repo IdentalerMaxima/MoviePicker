@@ -3,11 +3,14 @@ package Controller;
 import Business.Genre;
 import Business.Movie;
 import Service.xmlRead;
+import Service.xmlWrite;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
 import javax.xml.parsers.ParserConfigurationException;
+
+import static Service.xmlWrite.xmlWriter;
 
 @Path("/resources")
 public class HelloResource {
@@ -27,11 +30,9 @@ public class HelloResource {
 
     @POST
     @Path("addMovie")
-    @Consumes(MediaType.APPLICATION_XML)
-    @Produces(MediaType.APPLICATION_XML)
-    public Response postMovie(){
-        Movie movie1 = new Movie("New movie", 3, 2001, "idk", Genre.horror);
-        return Response.ok(movie1.toString()).build();
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.TEXT_PLAIN)
+    public void postMovie(String title){
+        System.out.println(title);
     }
-
 }

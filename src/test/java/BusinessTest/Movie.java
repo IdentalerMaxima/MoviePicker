@@ -1,4 +1,4 @@
-package Business;
+package BusinessTest;
 
 public class Movie {
     private String title;
@@ -6,10 +6,6 @@ public class Movie {
     private Integer year;
     private String director;
     private Genre genre;
-
-
-    public Movie() {
-    }
 
     public Movie(String title, Integer rating, Integer year, String director, Genre genre) {
         this.title = title;
