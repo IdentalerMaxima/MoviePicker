@@ -1,12 +1,14 @@
 package Business;
 
+import jakarta.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Movie {
     private String title;
     private Integer rating;
     private Integer year;
     private String director;
     private Genre genre;
-
 
     public Movie() {
     }

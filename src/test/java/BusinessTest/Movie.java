@@ -1,11 +1,21 @@
 package BusinessTest;
 
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlRootElement;
+
+
+@XmlRootElement(name = "movie")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Movie {
     private String title;
     private Integer rating;
     private Integer year;
     private String director;
     private Genre genre;
+
+    public Movie() {
+    }
 
     public Movie(String title, Integer rating, Integer year, String director, Genre genre) {
         this.title = title;
@@ -14,6 +24,7 @@ public class Movie {
         this.director = director;
         this.genre = genre;
     }
+
 
     public String getTitle() {
         return title;

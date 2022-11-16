@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Movies>
+    <movie>
+        <title>Grownups</title>
+        <rating>3</rating>
+        <year>2001</year>
+        <director>idk</director>
+        <genre>action</genre>
+    </movie>
+    <movie>
+        <title>Pirates of the Caribbean 1</title>
+        <rating>5</rating>
+        <year>2002</year>
+        <director>idk</director>
+        <genre>action</genre>
+    </movie>
+    <movie>
+        <title>The Godfather</title>
+        <rating>5</rating>
+        <year>2003</year>
+        <director>idk</director>
+        <genre>action</genre>
+    </movie>
+    <movie>
+        <title>Elk*rtuk</title>
+        <rating>1</rating>
+        <year>2004</year>
+        <director>idk</director>
+        <genre>action</genre>
+    </movie>
+    <movie>
+        <title>Reservoir dogs</title>
+        <rating>5</rating>
+        <year>2005</year>
+        <director>idk</director>
+        <genre>action</genre>
+    </movie>
+    <movie>
+        <title>Title</title>
+        <rating>1</rating>
+        <year>2001</year>
+        <director>idk</director>
+        <genre>action</genre>
+    </movie>
+    <movie>
+        <title>Title</title>
+        <rating>1</rating>
+        <year>2001</year>
+        <director>idk</director>
+        <genre>action</genre>
+    </movie>
+</Movies>

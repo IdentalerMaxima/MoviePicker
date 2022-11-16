@@ -1,16 +1,12 @@
 package Controller;
 
-import Business.Genre;
-import Business.Movie;
 import Service.xmlRead;
-import Service.xmlWrite;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
 import javax.xml.parsers.ParserConfigurationException;
 
-import static Service.xmlWrite.xmlWriter;
 
 @Path("/resources")
 public class HelloResource {
