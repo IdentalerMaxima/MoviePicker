@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Movies>
     <movie>
         <title>Grownups</title>
@@ -33,6 +33,27 @@
         <rating>5</rating>
         <year>2005</year>
         <director>idk</director>
+        <genre>action</genre>
+    </movie>
+    <movie>
+        <title>Title</title>
+        <rating>1</rating>
+        <year>2001</year>
+        <director>idk</director>
+        <genre>action</genre>
+    </movie>
+    <movie>
+        <title>Title</title>
+        <rating>1</rating>
+        <year>2001</year>
+        <director>idk</director>
+        <genre>action</genre>
+    </movie>
+    <movie>
+        <title>erik filmje</title>
+        <rating>1</rating>
+        <year>1991</year>
+        <director>aso</director>
         <genre>action</genre>
     </movie>
 </Movies>

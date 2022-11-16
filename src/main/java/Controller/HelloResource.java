@@ -1,9 +1,13 @@
 package Controller;
 
+import Business.Genre;
+import Business.Movie;
 import Service.xmlRead;
+import Service.xmlWrite;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+import jakarta.xml.bind.JAXBException;
 
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -28,7 +32,7 @@ public class HelloResource {
     @Path("addMovie")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
-    public void postMovie(String title){
-        System.out.println(title);
+    public void postMovie(Movie movie) throws JAXBException {
+        xmlWrite.marshaling(movie);
     }
 }

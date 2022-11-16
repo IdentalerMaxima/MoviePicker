@@ -1,11 +1,13 @@
+package Service;
+
+import Business.Movie;
+import Business.Movies;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;
 import jakarta.xml.bind.Unmarshaller;
-
-import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
-import java.io.IOException;
+import java.util.ArrayList;
 
 
 public abstract class xmlWrite {
@@ -19,15 +21,12 @@ public abstract class xmlWrite {
                 "src\\main\\java\\Resources\\moviesTest.xml") );
 
         Movies movieList = new Movies();
-        movieList.setMovies(new ArrayList<Movie>());
+        movieList.setMovies(new ArrayList<>());
 
         for(Movie movie : movies.getMovies())
         {
             movieList.getMovies().add(movie);
         }
-        /*for(Movie movie : movieList.getMovies()){
-            System.out.println(movie.getTitle());
-        }*/
         return movieList;
     }
     public static void marshaling(Movie movieToAdd) throws JAXBException
@@ -45,7 +44,7 @@ public abstract class xmlWrite {
 
         //Marshal the movieList in file
         jaxbMarshaller.marshal(movies, new File("C:\\Users\\koppa\\Desktop\\MoviePicker\\src\\" +
-                "main\\java\\Resources\\moviesTest.xml"));
+                "main\\java\\Resources\\movies.xml"));
     }
 }
 

@@ -1,8 +1,11 @@
 package Business;
 
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement
+@XmlRootElement(name = "movie")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Movie {
     private String title;
     private Integer rating;
